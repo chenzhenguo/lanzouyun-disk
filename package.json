@@ -77,16 +77,24 @@
     "wait-on": "^5.2.0",
     "web-vitals": "^0.2.4"
   },
-  "build": {
-    "productName": "蓝奏云盘",
-    "copyright": "更多内容到 https://github.com/chenhb23/lanzouyun-pan",
-    "appId": "org.chenhb23.lanzou",
-    "asar": true,
-    "files": [
-      "build"
-    ],
-    "mac": {
-      "category": "org.chenhb23.lanzou.client"
+"build": {
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "build/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
     }
+  }
   }
 }
